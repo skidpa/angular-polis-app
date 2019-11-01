@@ -1,0 +1,33 @@
+<div *ngIf="mymap" class="search-stuff form-inline">
+    <input class="form-control search" type="text" placeholder="Search for crime in area" #searchBox id="search-box" />
+    <button class="btn btn-primary" (click)="searchCityCrime(searchBox.value)">Search</button>
+</div>
+<div class="row no-gutters">
+    <div class="col-md-3 no-scroll">
+
+        <div *ngIf="cityArr" class="card place-card">
+            <ul class="list-group list-group-flush"> 
+                <li *ngFor="let place of cityArr" class="list-group-item page-item crime-area" (click)="searchCityCrime(place)">
+                    <span class="badge badge badge-primary">New crime!</span> {{ place }}
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card map-card">
+            <div class="map" id="mapid">
+	        </div>
+        </div>
+    </div>
+    <div  *ngIf="crimeArr" class="col-md-3 no-scroll">
+         <div *ngFor="let crime of crimeArr" class="card result-card">
+            <div class="card-body">
+                <h5 class="card-title">{{ crime['location'].name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ crime.name }}</h6>
+                <p class="card-text">{{ crime.summary }}</p>
+                <a href="{{ crime.url }}" target="_blank" class="card-link">Läs hos polisen</a>
+            </div>
+        </div>
+    </div>
+</div>
