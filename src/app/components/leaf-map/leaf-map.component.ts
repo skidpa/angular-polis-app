@@ -162,7 +162,8 @@ export class LeafMapComponent implements OnInit {
 
             if(parseInt(lat) === crimeLat && parseInt(long) == crimeLong){
                 let marker = leaflet.marker([crimeCords[0], crimeCords[1]]).addTo(this.mymap);
-                marker.bindPopup("<b>" + crimeObj['location'].name + "</b>").openPopup();
+                //marker.bindPopup("<b>" + crimeObj['location'].name + "</b>").openPopup();
+                marker.bindPopup("<b>" + crimeObj['location'].name + "</b>");
                 this.markerArr.push(marker);
                 this.crimeArr.push(crimeObj);
             }

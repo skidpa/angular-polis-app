@@ -1,3 +1,16 @@
+# Usage
+The app uses the swedish police api polisen.se/api/event
+and shows a list of places that something has occured.
+a user can also search for places.
+
+Click on one of those places and markers will show on the map.
+markers will be placed for the selected place and places in the nearby area where something has happend.
+There is a popup for each marker that will show/hide if the user clicks on them.
+
+once a place has been selected or the user has made a seach each event will be showed as single cards on the right side of the map.
+
+
+
 # CrimeApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
