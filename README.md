@@ -9,6 +9,8 @@ There is a popup for each marker that will show/hide if the user clicks on them.
 
 once a place has been selected or the user has made a seach each event will be showed as single cards on the right side of the map.
 
+The user can also choose to show the map as a normal streetmap or satellite
+
 
 
 # CrimeApp
