@@ -1,5 +1,5 @@
 # Usage
-The app uses the swedish police api polisen.se/api/event
+The app uses the swedish police api http://polisen.se/api/events
 and shows a list of places that something has occured.
 a user can also search for places.
 
